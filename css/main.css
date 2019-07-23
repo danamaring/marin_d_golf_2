@@ -77,3 +77,202 @@ h2, h3
   max-width: 1200px; 
 }
 
+
+
+/*Header and mobile nav*/
+#mainHeader {
+  margin: 5px 0 20px 0;
+}
+
+#mainNav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#mainNav button {
+  margin-left: auto;
+}
+
+#searchCon {
+  display: flex;
+  flex-direction: row;
+}
+
+#searchCon input[type=text] {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #cacaca;
+  border-radius: 3px 0 0 3px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  line-height: 1.5;
+  color: #0a0a0a;
+}
+
+#searchCon input[type=submit] {
+  height: 40px;
+  width: 100px;
+  border: 1px solid transparent;
+  border-radius: 0 3px 3px 0;
+  font-size: 0.75em;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: #8fa771;
+  color: #fefefe;
+}
+
+/*hide themenu by default*/
+
+#burgerCon {
+  display: none;
+  margin-top: 20px;
+}
+
+#burgerCon.slideToggle {
+  display: block;
+}
+
+#mainNav button {
+  background: url(../img/burger.svg) center no-repeat;
+  border: 0;
+  width: 35px;
+  height: 35px;
+  transition: all 400ms ease;
+}
+
+#mainNav button.expanded {
+/*  browser prefixes for transform*/  
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+/*default transform*/
+  transform: rotate(90deg);
+}
+
+#mainNav li a {
+  display: block;
+  color: #8ea76d;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#mainNav li {
+  border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child {
+  border-top: 1px solid #efefef;
+}
+
+#mainNAv li:last-child {
+  margin-bottom: 10px;
+}
+
+#mainNav li a:hover {
+  background-color: #efefef;
+}
+
+#searchForm {
+  margin-top: 20px;
+}
+
+#wollastonLogo {
+  display: block;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+
+/*handle the nav at desktop -> reflow to fit a new size*/
+
+@media screen and (min-width: 64em) {
+  #mainHeader {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  #button {
+    display: none;
+  }
+
+  #burgerCon {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #mainNav {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    margin-left: auto;
+  }
+
+  #burgerMenu {
+    text-align: right;
+  }
+
+  #mainNav li {
+    display: inline;
+    margin-left: 20px;
+    border-bottom: none;
+  }
+
+  #mainNav li a {
+    background-color: #fff;
+    display: inline;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #6d6d6c;
+  }
+
+  #mainNav li a:hover {
+    color: #8fa777;
+    border-bottom: 3px solid #8fa771;
+    padding-bottom: 5px;
+    background-color: transparent;
+  }
+
+  #mainNav li:first-child {
+    border-top: none;
+  }
+  
+  #mainNav li:last-child {
+    margin-top: 0;
+  }
+
+  #searchForm {
+    width: 97%;
+    order: -1;
+    margin: 0 0 40px auto;
+  }
+
+  #logoCon {
+    order: -1;
+  }
+
+  #wollastonLogo {
+    max-width: 160px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
